@@ -26,7 +26,7 @@ public class ProfilesTest {
     public final void testGetPDFAFlavour() {
         for (ValidationProfile profile: INTEGRATION_PROFILES.getValidationProfiles()) {
             for (Rule rule : profile.getRules()) {
-                assertTrue("Profile=" + profile.getPDFAFlavour().getPart() + ", rule=" + rule.getRuleId().getSpecification(), rule.getRuleId().getSpecification() == profile.getPDFAFlavour().getPart());
+                assertTrue("Profile=" + profile.getPDFAFlavour().getPart() + ", rule=" + rule.getRuleId(), rule.getRuleId().getSpecification() == profile.getPDFAFlavour().getPart());
             }
         }
     }
